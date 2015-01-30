@@ -1,4 +1,4 @@
-Name     : distr-pam-configs
+Name     : dist-pam-configs
 Version  : 1
 Release  : 4
 Source0  : pam-common
