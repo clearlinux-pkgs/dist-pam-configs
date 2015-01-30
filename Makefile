@@ -1,3 +1,3 @@
-PKG_NAME := distr-pam-configs
+PKG_NAME := dist-pam-configs
 
 include ../common/Makefile.common
