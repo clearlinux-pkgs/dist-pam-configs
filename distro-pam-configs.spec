@@ -1,6 +1,6 @@
 Name     : distr-pam-configs
 Version  : 1
-Release  : 2
+Release  : 3
 Source0  : pam-common
 Source1  : pam-login
 Source2  : pam-su
