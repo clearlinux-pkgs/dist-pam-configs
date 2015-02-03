@@ -2,6 +2,7 @@ Name     : dist-pam-configs
 Version  : 1
 Release  : 5
 Source0  : pam-su
+Source1  : pam-login
 Summary  : A set of pam configuration files
 Group    : Development/Tools
 License  : MIT
@@ -17,6 +18,7 @@ A set of pam configuration files.
 rm -rf %{buildroot}
 install -d -m 0755 %{buildroot}%{_sysconfdir}/pam.d
 install -m  0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/pam.d/su
+install -m  0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pam.d/login
 
 %files
 %defattr(-,root,root,-)
