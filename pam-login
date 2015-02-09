@@ -1,4 +1,4 @@
-session optional pam_motd.so
+session optional pam_motd.so motd=/run/motd
 
 auth       required     pam_securetty.so
 auth       requisite    pam_nologin.so
