@@ -19,13 +19,13 @@ A set of pam configuration files.
 
 %install
 rm -rf %{buildroot}
-install -d -m 0755 %{buildroot}%{_sysconfdir}/pam.d
-install -m  0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/pam.d/su
-install -m  0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pam.d/login
-install -m  0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pam.d/system-auth
-install -m  0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/pam.d/su-l
-install -m  0644 %{SOURCE4} %{buildroot}%{_sysconfdir}/pam.d/sudo
+install -d -m 0755 %{buildroot}%{_datadir}/pam.d
+install -m  0644 %{SOURCE0} %{buildroot}%{_datadir}/pam.d/su
+install -m  0644 %{SOURCE1} %{buildroot}%{_datadir}/pam.d/login
+install -m  0644 %{SOURCE2} %{buildroot}%{_datadir}/pam.d/system-auth
+install -m  0644 %{SOURCE3} %{buildroot}%{_datadir}/pam.d/su-l
+install -m  0644 %{SOURCE4} %{buildroot}%{_datadir}/pam.d/sudo
 
 %files
 %defattr(-,root,root,-)
-%{_sysconfdir}/pam.d/*
+%{_datadir}/pam.d/*
