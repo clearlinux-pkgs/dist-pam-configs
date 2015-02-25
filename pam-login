@@ -1,5 +1,8 @@
 session optional pam_motd.so motd=/run/motd
 
+# Set failure delay before next prompt to 3 seconds
+auth       optional     pam_faildelay.so  delay=3000000
+
 auth       required     pam_securetty.so
 auth       requisite    pam_nologin.so
 auth       include      common-auth
