@@ -6,6 +6,7 @@ Source1  : pam-login
 Source2  : pam-system-auth
 Source3  : pam-su-l
 Source4  : pam-sudo
+Source5  : pam-sshd
 Summary  : A set of pam configuration files
 Group    : Development/Tools
 License  : MIT
@@ -25,6 +26,7 @@ install -m  0644 %{SOURCE1} %{buildroot}%{_datadir}/pam.d/login
 install -m  0644 %{SOURCE2} %{buildroot}%{_datadir}/pam.d/system-auth
 install -m  0644 %{SOURCE3} %{buildroot}%{_datadir}/pam.d/su-l
 install -m  0644 %{SOURCE4} %{buildroot}%{_datadir}/pam.d/sudo
+install -m  0644 %{SOURCE5} %{buildroot}%{_datadir}/pam.d/sshd
 
 %files
 %defattr(-,root,root,-)
