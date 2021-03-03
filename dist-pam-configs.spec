@@ -1,6 +1,6 @@
 Name     : dist-pam-configs
 Version  : 1
-Release  : 29
+Release  : 30
 Source0  : pam-su
 Source1  : pam-login
 Source2  : pam-system-auth
@@ -22,16 +22,23 @@ A set of pam configuration files.
 
 %install
 rm -rf %{buildroot}
-install -d -m 0755 %{buildroot}%{_datadir}/pam.d
-install -m  0644 %{SOURCE0} %{buildroot}%{_datadir}/pam.d/su
-install -m  0644 %{SOURCE1} %{buildroot}%{_datadir}/pam.d/login
-install -m  0644 %{SOURCE2} %{buildroot}%{_datadir}/pam.d/system-auth
-install -m  0644 %{SOURCE3} %{buildroot}%{_datadir}/pam.d/su-l
-install -m  0644 %{SOURCE4} %{buildroot}%{_datadir}/pam.d/sudo
-install -m  0644 %{SOURCE5} %{buildroot}%{_datadir}/pam.d/sshd
-install -m  0644 %{SOURCE6} %{buildroot}%{_datadir}/pam.d/runuser
-install -m  0644 %{SOURCE7} %{buildroot}%{_datadir}/pam.d/runuser-l
+install -d -m 0755 %{buildroot}/usr/share/pam.d
+install -m  0644 %{SOURCE0} %{buildroot}/usr/share/pam.d/su
+install -m  0644 %{SOURCE1} %{buildroot}/usr/share/pam.d/login
+install -m  0644 %{SOURCE2} %{buildroot}/usr/share/pam.d/system-auth
+install -m  0644 %{SOURCE3} %{buildroot}/usr/share/pam.d/su-l
+install -m  0644 %{SOURCE4} %{buildroot}/usr/share/pam.d/sudo
+install -m  0644 %{SOURCE5} %{buildroot}/usr/share/pam.d/sshd
+install -m  0644 %{SOURCE6} %{buildroot}/usr/share/pam.d/runuser
+install -m  0644 %{SOURCE7} %{buildroot}/usr/share/pam.d/runuser-l
 
 %files
 %defattr(-,root,root,-)
-%{_datadir}/pam.d/*
+/usr/share/pam.d/su
+/usr/share/pam.d/login
+/usr/share/pam.d/system-auth
+/usr/share/pam.d/su-l
+/usr/share/pam.d/sudo
+/usr/share/pam.d/sshd
+/usr/share/pam.d/runuser
+/usr/share/pam.d/runuser-l
