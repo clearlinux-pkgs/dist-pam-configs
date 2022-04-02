@@ -1,6 +1,6 @@
 Name     : dist-pam-configs
 Version  : 1
-Release  : 30
+Release  : 31
 Source0  : pam-su
 Source1  : pam-login
 Source2  : pam-system-auth
